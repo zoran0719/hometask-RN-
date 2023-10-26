@@ -1,79 +1,97 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Movie Project
 
-# Getting Started
+## Introduction
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+Welcome to the Movie project, a React Native application designed to bring the latest and greatest movies right to your fingertips. Whether you're an Android or iOS user, we've got you covered. Dive into the world of movies with ease and discover trending, upcoming, and top-rated movies all in one place.
 
-## Step 1: Start the Metro Server
+## Getting Started
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+### Prerequisites
 
-To start Metro, run the following command from the _root_ of your React Native project:
+Before you begin, ensure you have the following installed:
+- Node.js
+- npm (Node Package Manager)
+- Android Studio (for Android development)
+- Xcode (for iOS development)
 
-```bash
-# using npm
-npm start
+### Installation
 
-# OR using Yarn
-yarn start
-```
+1. Clone the repository from GitHub:
+2. Navigate to the project directory:
+3. Install the required dependencies:
+4. To run the application, use the following commands:
+- For Android:
+  ```
+  npm run android
+  ```
+- For iOS:
+  ```
+  npm run ios
+  ```
 
-## Step 2: Start your Application
+## Tech Stacks
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+The Movie project is built using a robust set of technologies:
+- **React Native**: A framework for building native apps using React.
+- **Redux-toolkit**: A toolkit for efficient state management in React applications.
+- **Jest**: A delightful JavaScript Testing Framework with a focus on simplicity.
 
-### For Android
+## Project Structure
 
-```bash
-# using npm
-npm run android
+The project follows a modular and organized directory structure:
 
-# OR using Yarn
-yarn android
-```
+### Components
 
-### For iOS
+Reusable UI components:
+- `MovieSwipper`: A swiper component for browsing movies by category.
+- `TabBar`: A navigation component with items for Home, Playing, Trending, Upcoming, and Rating.
 
-```bash
-# using npm
-npm run ios
+### Assets
 
-# OR using Yarn
-yarn ios
-```
+Static files such as images, fonts, and icons.
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+### Redux
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+State management:
+- Slices: Reducers and actions for different modules.
+- Store: The global state store of the application.
 
-## Step 3: Modifying your App
+### Constants
 
-Now that you have successfully run the app, let's modify it.
+Constant values used throughout the application.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+### Screens
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+Individual screens/pages of the application:
+- `Auth`: Authentication and user sign-in.
+- `Main`: Overview of movies and categories.
+- `CategoryList`: List of movies categorized by Playing, Trending, Upcoming, and Rating.
 
-## Congratulations! :tada:
+## Features
 
-You've successfully run and modified your React Native App. :partying_face:
+- **State Management**: Redux-toolkit provides a predictable state container for the application.
+- **Lazy Loading and Image Optimization**: FastImage is used for efficient image loading and optimization.
+- **Data Fetching**: Movies data is fetched from the popular OMDB API.
+- **Authentication**: User authentication is handled using a mock API, ensuring secure and reliable sign-in.
 
-### Now what?
+## Testing
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+The Movie project is committed to maintaining high-quality code and user experience. As such, testing is an integral part of our development process. We use Jest, a comprehensive JavaScript testing framework, to ensure that our application is reliable, performs well, and is free of bugs.
 
-# Troubleshooting
+### Unit Testing
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+- **Components**: We write tests for our React components to ensure that they render correctly and handle props and state as expected.
+- **Redux**: Our Redux slices and actions are tested to guarantee that our state management is predictable and error-free.
 
-# Learn More
+### Integration Testing
 
-To learn more about React Native, take a look at the following resources:
+We perform integration tests to ensure that different parts of our application work well together. This includes testing the interaction between React components, as well as the integration between our components and Redux store.
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+### UI Testing
+
+Our UI tests focus on user interactions and visual elements to ensure a seamless and visually appealing user experience.
+
+### Continuous Integration
+
+We have set up a continuous integration (CI) pipeline to run our test suite on every push and pull request. This helps us catch and fix issues early, ensuring a stable and reliable codebase.
+
